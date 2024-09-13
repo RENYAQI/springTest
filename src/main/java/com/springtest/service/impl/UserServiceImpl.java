@@ -29,7 +29,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
-
     @Override
     public User getUserInfoByToken(String token) {
         User userInfo = new User();
@@ -64,6 +63,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         // Create a new user
         User newUser = new User();
         newUser.setUsername(user.getUsername());
+//        newUser.setPassword(encodedPassword);
         newUser.setPassword(user.getPassword());
         newUser.setRoles("admin,editor");// In a real application, hash the password before saving
 
@@ -77,7 +77,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (user == null) {
             throw new RuntimeException("用户未注册");
         }
-
         if (!user.getPassword().equals(password)) {
             throw new RuntimeException("密码错误");
         }
