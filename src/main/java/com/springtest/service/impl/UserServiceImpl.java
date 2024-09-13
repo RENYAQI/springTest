@@ -29,8 +29,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
     @Autowired
     private JwtTokenUtil jwtTokenUtil;
 
-//    @Autowired
-//    private PasswordEncoder passwordEncoder;
 
     @Override
     public User getUserInfoByToken(String token) {
@@ -61,12 +59,11 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
             throw new RuntimeException("User already exists");
         }
 
-//        String encodedPassword = passwordEncoder.encode(user.getPassword());
+
 
         // Create a new user
         User newUser = new User();
         newUser.setUsername(user.getUsername());
-//        newUser.setPassword(encodedPassword);
         newUser.setPassword(user.getPassword());
         newUser.setRoles("admin,editor");// In a real application, hash the password before saving
 
@@ -80,9 +77,7 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         if (user == null) {
             throw new RuntimeException("用户未注册");
         }
-//        if (!passwordEncoder.matches(password, user.getPassword())) {
-//            throw new RuntimeException("密码错误");
-//        }
+
         if (!user.getPassword().equals(password)) {
             throw new RuntimeException("密码错误");
         }
