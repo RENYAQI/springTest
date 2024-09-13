@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: springTest
+  datasource:
+    url: jdbc:mysql://localhost:3306/poetize?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
+    username: root
+    password: 115795
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+server:
+  port: 8081
+  tomcat:
+    threads.max: 50
+    max-connections: 100
+    max-http-form-post-size: 120MB
+    connection-timeout: 60000
+
+mybatis-plus:
+  mapper-locations: classpath*:mapper/**/*.xml
+  #  configuration:
+  #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
