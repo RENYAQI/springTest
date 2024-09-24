@@ -37,8 +37,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements Us
         QueryWrapper<User> queryWrapper = new QueryWrapper<>();
         queryWrapper.eq("username", tokenUserName);
         User user = getBaseMapper().selectOne(queryWrapper);
-        System.out.println(user.getRoles());
-
 
         userInfo.setRoles(user.getRoles());
         userInfo.setUsername(user.getUsername());
