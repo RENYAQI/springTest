@@ -1,4 +1,4 @@
-package com.springtest.dao;
+package com.springtest.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.springtest.entity.Orders;

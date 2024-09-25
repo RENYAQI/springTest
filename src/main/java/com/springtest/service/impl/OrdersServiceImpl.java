@@ -4,7 +4,7 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 
-import com.springtest.dao.OrdersMapper;
+import com.springtest.mapper.OrdersMapper;
 import com.springtest.entity.Orders;
 import com.springtest.service.OrdersService;
 import org.springframework.beans.factory.annotation.Autowired;

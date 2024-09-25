@@ -2,7 +2,7 @@ package com.springtest.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.springtest.dao.UserMapper;
+import com.springtest.mapper.UserMapper;
 import com.springtest.entity.User;
 import com.springtest.service.UserService;
 import com.springtest.util.JwtTokenUtil;

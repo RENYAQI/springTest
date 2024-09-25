@@ -1,4 +1,4 @@
-package com.springtest.dao;
+package com.springtest.mapper;
 
 import com.springtest.entity.User;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
